@@ -3,10 +3,8 @@
 source_dirs=${1}
 source_extensions=${2}
 
-current_dir=`dirname "${BASH_SOURCE[0]}"`
-
 clang_format_version=6.0
-config_file=${current_dir}/.clang-format
+config_file=".clang-format"
 
 do_find_clang_format() {
     result=`which clang-format-${clang_format_version}` && echo ${result} && exit 0
